@@ -96,7 +96,20 @@ PRODUCT_PACKAGES += \
     init.ago.rc \
     fstab.enableswap \
     init.safailnet.rc \
-    perf_profile.sh
+    perf_profile.sh \
+    mtk-ims \
+    mtk-ims-telephony
+
+# Telephony
+PRODUCT_BOOT_JARS += \
+    ImsServiceBase
+
+PRODUCT_PACKAGES += \
+    ImsServiceBase
+
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
