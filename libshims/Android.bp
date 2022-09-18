@@ -13,7 +13,12 @@ java_library {
 cc_library_shared {
     name: "libshim_vtservice",
     srcs: ["libshim_vtservice.cpp"],
-    shared_libs: ["libaudioclient"],
+    shared_libs: [
+        "libaudioclient",
+        "libgui",
+        "libstagefright",
+        "libutils",
+    ],
     header_libs: [
         "libaudioclient_headers",
         "libmedia_headers",
