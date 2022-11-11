@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libldacBT_dec
 
+#MtkOmxVdecEx
+PRODUCT_PACKAGES += \
+    libui-v32
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
