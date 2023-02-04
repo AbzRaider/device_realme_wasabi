@@ -69,6 +69,44 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libui-v32
 
+# Camera
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.provider@2.4.vendor
+
+PRODUCT_PACKAGES += \
+    libshim_camera_metadata
+
+# Disable Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0.vendor \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.common@1.2 \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+
+PRODUCT_PACKAGES += \
+    libvulkan
+
+# DRM
+PRODUCT_PACKAGES += \
+    libmockdrmcryptoplugin \
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm-service.clearkey
+
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-RMX2020
+>>>>>>> 5429030 (RMX2020: Add libcamera_metadata shim for stripping out system camera cap)
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
