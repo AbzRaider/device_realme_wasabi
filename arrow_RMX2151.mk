@@ -36,6 +36,9 @@ PRODUCT_BRAND := Realme
 PRODUCT_MODEL := RMX2151
 PRODUCT_MANUFACTURER := Realme
 
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.211001.001/7641976:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="redfin-user 11 RQ3A.211001.001 7641976 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
