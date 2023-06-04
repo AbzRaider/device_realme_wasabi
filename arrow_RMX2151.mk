@@ -21,28 +21,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX2151/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
-TARGET_GAPPS_ARCH := arm64
-TARGET_BOOT_ANIMATION_RES := 1080
-CUSTOM_BUILD_TYPE=OFFICIAL
+# ArrowOS bringup.
+DEVICE_MAINTAINER := Pratham
 TARGET_FACE_UNLOCK_SUPPORTED := true
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ppui.device_name=Realme-G95-Series \
-    ro.ppui.version=3.9 \
-    ro.ppui.version_code=Eternal \
-    ro.ppui.is_official=true \
-    ro.ppui.maintainer_name=Sauraj
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_RMX2151
+PRODUCT_NAME := arrow_RMX2151
 PRODUCT_DEVICE := RMX2151
-PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme G95 Series
-PRODUCT_MANUFACTURER := realme
+PRODUCT_BRAND := Realme
+PRODUCT_MODEL := RMX2151
+PRODUCT_MANUFACTURER := Realme
 
-# Build info
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys"
 
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
